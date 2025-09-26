@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Billiard Pro — Reservasi & Profil Resmi</title>
+  <meta name="description" content="Website resmi Billiard Pro — reservasi meja, galeri, event, dan info lengkap." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#0f172a;
+      --accent:#ff6b6b;
+      --muted:#718096;
+      --gradient: linear-gradient(135deg,#0f172a,#1e293b);
+      --card:#ffffff;
+      --radius: 16px;
+      font-family:'Inter', sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:#f1f5f9;color:#0b1220}
+    a{color:var(--accent);text-decoration:none;transition:.3s}
+    a:hover{opacity:.7}
+
+    /* Header */
+    header{background:var(--gradient);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
+    .brand .logo{width:50px;height:50px;background:var(--accent);color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+    nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+    nav .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:12px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:36px;align-items:center;padding:80px 0}
+    .hero h1{font-size:46px;font-family:'Playfair Display',serif;margin:0 0 16px;color:var(--brand)}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 24px}
+    .features{display:flex;gap:14px;flex-wrap:wrap}
+    .feature{background:#fff;padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(15,23,42,0.08);min-width:160px;flex:1;text-align:center;font-weight:600;color:var(--brand)}
+
+    .reservation-card{background:#fff;padding:28px;border-radius:20px;box-shadow:0 12px 30px rgba(15,23,42,0.15)}
+    .reservation-card h3{margin-top:0;color:var(--brand)}
+    .field{display:flex;flex-direction:column;margin-bottom:14px}
+    .field label{font-size:14px;color:var(--muted);margin-bottom:6px}
+    .field input,.field select,.field textarea{padding:12px;border-radius:10px;border:1px solid #e2e8f0;font-size:15px}
+    .btn-primary{background:var(--accent);color:#fff;padding:12px 16px;border-radius:12px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+
+    /* Sections */
+    section{padding:72px 0}
+    h3{font-size:28px;font-weight:700;color:var(--brand);margin-bottom:20px;position:relative;}
+    h3::after{content:'';display:block;width:60px;height:4px;background:var(--accent);margin-top:8px;border-radius:4px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .card{background:var(--card);padding:22px;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.08);transition:.3s}
+    .card:hover{transform:translateY(-4px)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .gallery img{width:100%;height:200px;object-fit:cover;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:.3s}
+    .gallery img:hover{transform:scale(1.03)}
+
+    /* Team */
+    .team-member img{width:100px;height:100px;border-radius:50%;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+
+    /* Footer */
+    footer{background:var(--gradient);color:#fff;padding:40px 0;margin-top:40px}
+    footer a{color:#fff;opacity:.85}
+    footer a:hover{opacity:1}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      nav ul{display:none}
+      .mobile-nav{display:block}
+    }
+    @media (max-width:520px){
+      .hero h1{font-size:34px}
+      .gallery img{height:160px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">BP</div>
+          <div>Billiard Pro</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#events">Event</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a class="btn" href="#reserve">Reservasi</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-nav" style="display:none">
+          <button id="mobileMenuBtn" aria-label="menu">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <h1>Selamat Datang di <span style="color:var(--accent)">Billiard Pro</span></h1>
+        <p>Nikmati pengalaman billiard profesional dengan suasana nyaman, layanan lengkap, dan reservasi online mudah.</p>
+
+        <div class="features">
+          <div class="feature">Reservasi Online</div>
+          <div class="feature">12 Meja Profesional</div>
+          <div class="feature">Event & Turnamen</div>
+          <div class="feature">Dukungan 24/7</div>
+        </div>
+
+        <div style="margin-top:20px">
+          <a class="btn-primary" href="#reserve">Buat Reservasi</a>
+          <a style="margin-left:12px;font-weight:600;color:var(--brand)" href="#contact">Hubungi Kami</a>
+        </div>
+      </div>
+      <aside>
+        <div class="reservation-card" id="reserve">
+          <h3>Form Reservasi</h3>
+          <form id="reservationForm">
+            <div class="field"><label>Nama</label><input type="text" id="name" required placeholder="Nama Anda"></div>
+            <div class="field"><label>No. HP</label><input type="tel" id="phone" required placeholder="0812xxxx"></div>
+            <div class="field"><label>Tanggal & Waktu</label><input type="datetime-local" id="datetime" required></div>
+            <div class="field"><label>Durasi</label>
+              <select id="duration">
+                <option value="1">1 jam</option>
+                <option value="2">2 jam</option>
+                <option value="3">3 jam</option>
+              </select>
+            </div>
+            <div class="field"><label>Catatan</label><textarea id="note" rows="3" placeholder="Permintaan khusus"></textarea></div>
+            <button class="btn-primary" type="submit">Kirim Reservasi</button>
+            <p id="resMsg" style="margin-top:10px;color:var(--muted)"></p>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services">
+      <h3>Layanan Kami</h3>
+      <div class="grid-3">
+        <div class="card"><h4>Reservasi Meja</h4><p>Pesan meja kapan saja secara online.</p></div>
+        <div class="card"><h4>Event & Turnamen</h4><p>Ikuti kompetisi billiard bergengsi bulanan.</p></div>
+        <div class="card"><h4>Pelatihan & Coaching</h4><p>Belajar teknik billiard dengan coach profesional.</p></div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h3>Galeri</h3>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format" alt="billiard1">
+        <img src="https://images.unsplash.com/photo-1546484959-f3b1bfb9d8c9?q=80&w=800&auto=format" alt="billiard2">
+        <img src="https://images.unsplash.com/photo-1558980394-0c4d8d9f4f4a?q=80&w=800&auto=format" alt="billiard3">
+        <img src="https://images.unsplash.com/photo-1558980664-10a7d2a6d6d6?q=80&w=800&auto=format" alt="billiard4">
+      </div>
+    </section>
+
+    <section id="events">
+      <h3>Event & Jadwal</h3>
+      <div class="grid-3">
+        <div class="card"><h4>Turnamen September</h4><p>12 Oktober 2025 – Pendaftaran dibuka.</p></div>
+        <div class="card"><h4>Latihan Bersama</h4><p>Setiap Sabtu sore untuk semua level.</p></div>
+        <div class="card"><h4>Mini Competition</h4><p>Kompetisi mingguan dengan hadiah menarik.</p></div>
+      </div>
+    </section>
+
+    <section id="team">
+      <h3>Tim Kami</h3>
+      <div class="grid-3">
+        <div class="card center team-member"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format" alt="coach"><h4>John Doe</h4><p>Head Coach</p></div>
+        <div class="card center team-member"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format" alt="manager"><h4>Jane Smith</h4><p>Manager</p></div>
+        <div class="card center team-member"><img src="https://images.unsplash.com/photo-1545996124-1f1a4b7a2d26?q=80&w=400&auto=format" alt="staff"><h4>Putra Wijaya</h4><p>Customer Service</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Hubungi Kami</h3>
+      <div class="grid-3">
+        <form id="contactForm" class="card">
+          <div class="field"><label>Nama</label><input id="cname" required></div>
+          <div class="field"><label>Email</label><input id="cemail" type="email" required></div>
+          <div class="field"><label>Pesan</label><textarea id="cmsg" rows="4" required></textarea></div>
+          <button class="btn-primary" type="submit">Kirim Pesan</button>
+          <p id="cMsg" style="margin-top:10px;color:var(--muted)"></p>
+        </form>
+        <div class="card"><h4>Alamat</h4><p>Jalan Contoh No.12 — Kota Contoh</p><h4>Jam Buka</h4><p>10:00 — 02:00</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <div><strong>Billiard Pro</strong><br><small>© 2025 All rights reserved.</small></div>
+      <div style="display:flex;gap:16px"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const reservationForm=document.getElementById('reservationForm');
+    reservationForm.addEventListener('submit',e=>{e.preventDefault();document.getElementById('resMsg').textContent='Reservasi berhasil disimpan (demo).';reservationForm.reset()});
+    const contactForm=document.getElementById('contactForm');
+    contactForm.addEventListener('submit',e=>{e.preventDefault();document.getElementById('cMsg').textContent='Pesan terkirim (demo).';contactForm.reset()});
+  </script>
+</body>
+</html>
