@@ -1,6 +1,6 @@
 # 🎱 Official Billiard Website
 
-Website resmi untuk **[Nama Billiard]**, dibuat menggunakan **HTML, CSS, dan JavaScript**.  
+Website resmi untuk **[Billiard]**, dibuat menggunakan **HTML, CSS, dan JavaScript**.  
 Website ini dirancang modern, responsif, dan mudah digunakan, lengkap dengan fitur reservasi, galeri, event, dan kontak.
 
 ---
@@ -14,8 +14,3 @@ Website ini dirancang modern, responsif, dan mudah digunakan, lengkap dengan fit
 - 📱 **Responsive Design** untuk semua perangkat  
 
 ---
-
-## 🚀 Cara Menggunakan
-1. Clone repository ini:
-   ```bash
-   git clone https://github.com/username/nama-repository.git
