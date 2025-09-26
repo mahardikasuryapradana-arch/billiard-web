@@ -1,33 +1,21 @@
-# 👋 Hi, I'm Mahardika Surya Pradana  
+# 🎱 Official Billiard Website
 
-🎓 **Fresh Graduate** in Mechatronics Engineering  
-💻 Passionate about **Web Development, IoT, and Automation**  
-🚀 Currently exploring **HTML, CSS, JavaScript, and GitHub Pages**  
-
----
-
-## 🔧 Tech Stack
-- 🛠️ Mechatronics: PLC, Microcontrollers, Sensors, Robotics  
-- 💻 Programming: Python, C++, JavaScript  
-- 🌐 Web: HTML, CSS, JS, GitHub Pages  
+Website resmi untuk **[Nama Billiard]**, dibuat menggunakan **HTML, CSS, dan JavaScript**.  
+Website ini dirancang modern, responsif, dan mudah digunakan, lengkap dengan fitur reservasi, galeri, event, dan kontak.
 
 ---
 
-## 📌 Projects
-- 🎱 [Billiard Club Website](https://mahardikasuryapradana-arch.github.io/Billiard/)  
-  Website untuk bisnis billiard dengan fitur galeri, reservasi, dan animasi.  
+## ✨ Fitur Utama
+- 🌐 **Halaman Beranda** dengan hero section menarik  
+- 🗓️ **Reservasi Online** (formulir booking)  
+- 🖼️ **Galeri Foto** dengan desain modern  
+- 🎉 **Event & Promo** section  
+- 👥 **Tim & Kontak**  
+- 📱 **Responsive Design** untuk semua perangkat  
 
 ---
 
-## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mahardikasuryapradana-arch&show_icons=true&theme=tokyonight)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mahardikasuryapradana-arch&layout=compact&theme=tokyonight)
-
----
-
-## 📫 Connect with Me
-- ✉️ Email: **[tulis email kamu di sini]**  
-- 💼 LinkedIn: **[tulis linkedin kamu di sini]**  
-
----
-⭐️ *Always learning, always building!* 🚀
+## 🚀 Cara Menggunakan
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/username/nama-repository.git
